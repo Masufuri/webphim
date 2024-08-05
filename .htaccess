@@ -1,0 +1,11 @@
+<IfModule ModSecurity2.c>
+SecRuleRemoveById 2382280
+</IfModule>
+
+
+<IfModule mod_security2.c>
+SecRuleRemoveById 340162 
+</IfModule>
+<IfModule mod_security2.c>
+SecRuleRemoveById 340147 
+</IfModule>

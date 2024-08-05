@@ -1,0 +1,240 @@
+*{
+    font-family: sans-serif;
+    text-decoration: none;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e6d4d4;
+}
+.signin,.signup{
+    padding: 25px 30px;
+}
+.wrapper{
+    width: 450px;
+    background-color: antiquewhite;
+    border-radius: 16px;
+}
+/* Đây là css Đăng nhập, đăng ký */
+:is(.signin, .signup) header{
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffb8b8;
+}
+.error{
+    display: none;
+    margin-top: 20px;
+    background-color: #ff8f8f;
+    color: #8c1919;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    /* margin-bottom: 10px; */
+}
+:is(.signin,.signup) form{
+    margin-top: 10px;
+}
+.fields{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.input input{
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #e9afaf;
+    font-size: 16px;
+    padding: 0 10px;
+}
+.input label{
+    margin-bottom: 2px;
+}
+.image input{
+    font-size: 15px;
+}
+.submit input{
+    height: 35px;
+    margin-top: 13px;
+    border: none;
+    font-size: 17px;
+    background-color: #665f5f;
+    cursor: pointer;
+    color: aliceblue;
+    border-radius: 5px;
+}
+.advice{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* CSS Người dùng */
+.user{
+    padding: 25px 30px;
+}
+.user header,.user-list a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ff8f8f;
+}
+.user .profile{
+    display: flex;
+    align-items: center;
+}
+.user .profile .details{
+    margin-left: 15px;
+}
+.user .profile .details span{
+    font-weight: bold;
+    font-size: 17px;
+}
+.user .profile img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.user .search{
+    position: relative;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user .search input{
+    position: absolute;
+    left: 0;
+    width: calc(100% - 60px);
+    height: 30px;
+    border: 1px solid #665f5f;
+    padding: 0 10px;
+    outline: none;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.user .search input.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.user .search button{
+    width: 35px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #e6d4d4;
+    background-color: #ff8f8f;
+    cursor: pointer;
+}
+.user-list .profile img{
+    width: 45px;
+    height: 45px;
+}
+.user-list{
+    max-height: 350px;
+    overflow-y: auto;
+}
+.user-list::-webkit-scrollbar{
+    width: 0px;
+}
+.user-list a{
+    margin-top: 10px;
+}
+.user-list a:active{
+    
+}
+.user-list a:last-child{
+    border-bottom: none;
+}
+.status-dots.offline{
+    color: #665f5f;
+}
+/* Code bên Chat-area */
+.chat-area {
+    
+}
+.chat-area header img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+.chat-area header{
+    display: flex;
+    align-items: center;
+    padding: 18px 25px;
+}
+.chat-area header .details span{
+    font-weight: bold;
+    font-size: 17px;
+}
+.chat-box{
+    background-color: #cbc3ec;
+    height: 300px;
+    padding: 10px 30px 20px 30px;
+    
+    overflow: auto;
+}
+.chat-box .chat{
+    margin-bottom: 10px;
+}
+.chat-box .incoming img{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.chat-box .incoming{
+    display: flex;
+    align-items: flex-end;
+}
+.chat-box .chat .details{
+    padding: 8px 16px;
+    
+    max-width: calc(100% - 100px);
+    overflow-wrap: break-word;
+}
+.chat-box .incoming .details{
+    margin-left: 10px;
+    background-color: #ffb8b8;
+    border-radius: 18px 18px 18px 0;
+    
+}
+.chat-box .outgoing .details{
+    background-color: aqua;
+    border-radius: 18px 18px 0 18px;
+    width: fit-content;
+    margin-left: auto;
+}
+.chat-area .typing-area .type{
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 30px;
+}
+.typing-area .type input{
+    height: 40px;
+    width: calc(100% - 75px);
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    border: 1px solid;
+    padding: 0 10px;
+}
+.typing-area .type button{
+    width: 50px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background: #333;
+    color: #fff;
+    outline: none;
+    font-size: 19px;
+    cursor: pointer;
+}

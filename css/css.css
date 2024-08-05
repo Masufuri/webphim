@@ -1,0 +1,353 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{margin: auto;background-color: #cacaff;}
+a{text-decoration: none;color: black;height: initial;width:inherit;}
+.sum{margin: 0;padding: 0;width: 95%;margin: 0 auto;font-family: Arial, sans-serif;height:100%;display:flex;flex-direction:column;transition: filter 0.5s;}
+.sum.active{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.dangnhap,.dangky{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-blend-mode: color;
+    align-content: center;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 2;
+    flex-wrap: wrap;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.5s;
+}
+:is(.dangnhap,.dangky).active{
+    opacity: 1;
+    pointer-events: auto;
+}
+/*.dangnhap form{
+    background: aqua;
+    width: 300px;
+    height: 100px;
+    z-index: 3;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dangnhap form span{
+	margin-bottom:10px;
+}
+.dangnhap form div{
+    text-align: center;
+    /* margin: 13%;
+    width: 100%;
+    height: 30px;   /
+}*/
+:is(.dangnhap,.dangky)>.vien_ngoai_form{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+}
+/*.dangnhap input[type=password]{
+    outline: none;
+    border: 1px solid;
+    border-radius: 4px;
+    height: 20px;
+}
+.dangnhap input[type=submit]{
+    border-radius: 4px;
+    border: 1px solid;
+    background-color: #7ba5d5;
+    height: 24px;
+    cursor: pointer;
+    outline: none;
+}*/
+.signin,.signup{
+    padding: 25px 30px;
+}
+.wrapper{
+    width: 450px;
+    background-color: antiquewhite;
+    border-radius: 16px;
+    z-index: 2;
+}
+:is(.signin, .signup) header{
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffb8b8;
+}
+.error{
+    display: none;
+    margin-top: 20px;
+    background-color: #ff8f8f;
+    color: #8c1919;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    /* margin-bottom: 10px; */
+}
+:is(.signin,.signup) form{
+    margin-top: 10px;
+}
+.fields{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.input input{
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #e9afaf;
+    font-size: 16px;
+    padding: 0 10px;
+}
+.submit input{
+    height: 35px;
+    margin-top: 13px;
+    border: none;
+    font-size: 17px;
+    background-color: #665f5f;
+    cursor: pointer;
+    color: aliceblue;
+    border-radius: 5px;
+}
+.input label{
+    margin-bottom: 2px;
+}
+/*Từ đây trở lên trên là ĐĂNG NHẬP ĐĂNG KÝ*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  /* TỪ ĐÂY TRỞ LÊN LÀ CHECKBOX NỀN TỐI */
+
+.top{
+    height: 70px;
+    display: flex;
+    width: 100%;
+    background-color: #0000002e;
+    padding-left: calc(5% + 2px);
+    margin-left: calc(-2.5% - 1px);
+    align-items: center;
+}
+.ftimkiem input{
+    border-radius: 30px;
+    /*width: 350px;*/
+    width:25vw;
+    height: 30px;
+    /* margin: 15px 0 auto 10px; */
+    padding-left: 5px;
+    outline: none;
+    border: 1px solid;
+}
+.top>a{
+    width:auto;
+}
+.footer{
+    height: 80px;
+    min-height:80px;
+    background: #8282ff;
+    clear: both;
+    margin-top:10px;
+    /*width: 105%;
+    margin-left:-2.5%;*/
+    width: calc(105% + 2px);
+    margin-left: calc(-2.5% - 1px);
+}
+
+.danhmuc{height: 30px;display: inline-flex;width: 100%;padding-bottom: 5px;}
+.bdm{margin: auto;text-align: center;position: relative;display: inline-table;width: 20%;height: 100%;line-height: 30px;/* box-shadow: 1px 1px 2px */}
+.bdm > a{display: block;text-decoration: none;color: black;width:auto;height:auto;}
+/*hover danh muc*/
+.bdm:hover > a{background-color: #EBEBF4;}
+.hovertheloai{
+    /* display: none; */
+    position: absolute;
+    background-color: #b8b8ff;
+    width: 440px;
+    max-height:0px;
+    transition: max-height 0.3s;
+    overflow:hidden;
+    /*height: auto;*/
+    /*visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s,visibility 0.3s;*/
+    z-index: 2;
+    /* box-shadow: 1px 1px 1px */}
+#hovertheloai-nam{right: 0px}
+.bdm:hover .hovertheloai{display: block;z-index: 2;margin: auto;max-height:500px;/*visibility: visible;opacity: 1;*/}
+/* .bdm:hover .menunho{opacity: 1;} */
+.menunho{width: 110px;text-decoration: none;color: black;float: left;/* box-shadow: 1px 1px 1px */;/*background-color: #cacaff; transition: opacity 0.3s;opacity: 0; */}
+.menunho:hover{/* background-color: coral */color:blue;}
+
+:is(.hot, .new)>h1{text-align:center;background-color: #eaa69b;border-radius: 10vw;padding: 5px 0;}
+.hot{float: left;width: 100%;}
+.cacpichot{display: flex;width: fit-content;height: fit-content;max-width: 90%;overflow: auto;margin: auto;}
+.cacpichot::-webkit-scrollbar{height: 6px;background-color: #F5F5F5;}
+.cacpichot::-webkit-scrollbar-thumb{background-color: black;border-radius: 5px;}
+.cacpichot::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: #F5F5F5;border-radius: 5px;
+}
+.pichot{width: 150px;height: 200px;object-fit: cover;box-shadow: 1px 1px 3px;border-radius: 6px;}
+.divpichot{width: fit-content;height: fit-content;text-align: center;margin:0 5px 0 5px;}
+
+.title-phim, .title-phim-hot{
+    font-weight: bold;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+span.title-phim-hot {
+    line-height: 1.8;
+}
+
+.new{float: left;width: 100%;margin: auto;}
+.title-phim{
+    bottom: 0px;
+    /* position: absolute; */
+    /* color: white; */
+    width: 100%;
+    height: fit-content;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.cacpicnew{max-width: 767px;margin:10px auto 0;;text-align: center;}
+.picnew{
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    object-fit: cover;
+    /* box-shadow: inset 2px -5px 15px 10px black; */
+    border-radius: 6px;
+    }
+.divpicnew{
+    
+    width: 150px;
+    height: 224px;
+    position: relative;
+    display: inline-flex;
+    /* box-shadow: 1px 1px 3px, inset -7px -9px 15px 10px black; */
+    margin: 0 3px 40px 3px;
+    }
+.clr{clear: both;}
+
+/**/
+.form_margin_top_10px{margin-top: 10px;}
+.theloaitronginfo{color: blue;}
+.theloaitronginfo:hover{color: brown;}
+
+/*infophim*/
+.infophim{text-align: left;/* width: 500px; */}
+.imginfophim{position: relative;width: fit-content;float: left;}
+.imginfophim > .picnew{width: 300px;height: 400px;}
+.bxemphim{position: absolute;bottom: 10px;left: 20px;}
+
+/*Mới thêm*/
+.clsvideo{
+			
+			display: inline-flex;
+			width: 100%;
+
+		}
+a.btn-themphim, a.btn-themtheloai,.btn-suaphim,.btn-dangnhap{
+    cursor: pointer;
+    border: 1px;
+    border-color: black;
+    border-collapse: collapse;
+    border-style: solid;
+    /* vertical-align: middle; */
+    /*margin: auto 0 27px;*/
+    background: lightblue;
+    padding: 2px 5px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left:10px;
+}
+.phantrang li{
+        display: inline-block;
+}
+.phantrang li a{
+    display: inline-block;
+    background-color: aqua;
+    margin: 0 2px;
+    padding: 2px 5px;
+}
+.phantrang{
+    text-align:center;
+    padding:0;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
